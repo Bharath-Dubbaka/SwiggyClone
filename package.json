@@ -1,0 +1,19 @@
+{
+  "name": "jstoreact",
+  "version": "1.0.0",
+  "description": "project created to understand the transition between js and react",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bharath-Dubbaka/jsToReact.git"
+  },
+  "author": "bharathDubbaka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bharath-Dubbaka/jsToReact/issues"
+  },
+  "homepage": "https://github.com/Bharath-Dubbaka/jsToReact#readme"
+}
