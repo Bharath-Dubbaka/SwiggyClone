@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Bharath-Dubbaka/jsToReact/issues"
   },
-  "homepage": "https://github.com/Bharath-Dubbaka/jsToReact#readme"
+  "homepage": "https://github.com/Bharath-Dubbaka/jsToReact#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
 }
