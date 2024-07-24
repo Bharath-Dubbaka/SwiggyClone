@@ -1,26 +1,29 @@
 {
-  "name": "jstoreact",
-  "version": "1.0.0",
-  "description": "project created to understand the transition between js and react",
-  "scripts": {
-    "test": "jest"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Bharath-Dubbaka/jsToReact.git"
-  },
-  "author": "bharathDubbaka",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Bharath-Dubbaka/jsToReact/issues"
-  },
-  "homepage": "https://github.com/Bharath-Dubbaka/jsToReact#readme",
-  "devDependencies": {
-    "parcel": "^2.12.0",
-    "process": "^0.11.10"
-  },
-  "dependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  }
+   "name": "jstoreact",
+   "version": "1.0.0",
+   "description": "project created to understand the transition between js and react",
+   "scripts": {
+      "test": "jest"
+   },
+   "repository": {
+      "type": "git",
+      "url": "git+https://github.com/Bharath-Dubbaka/jsToReact.git"
+   },
+   "author": "bharathDubbaka",
+   "license": "ISC",
+   "bugs": {
+      "url": "https://github.com/Bharath-Dubbaka/jsToReact/issues"
+   },
+   "homepage": "https://github.com/Bharath-Dubbaka/jsToReact#readme",
+   "devDependencies": {
+      "parcel": "^2.12.0",
+      "process": "^0.11.10"
+   },
+   "dependencies": {
+      "react": "^18.3.1",
+      "react-dom": "^18.3.1"
+   },
+   "browserslist": [
+      "last 10 versions"
+   ]
 }
