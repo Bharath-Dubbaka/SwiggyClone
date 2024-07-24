@@ -1,3 +1,8 @@
+import React from "react";
+// import ReactDOM from "reactdom"
+import * as ReactDOM from 'react-dom';
+
+
 // using React/Cdn to create Element
 const h1 = React.createElement(
    // Obj type
