@@ -1,3 +1,136 @@
-#heading {
-   color: green;
+/* Import Google Font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+* {
+   padding: 0;
+   margin: 0;
+   font-family: "Poppins", sans-serif;
+   box-sizing: border-box;
+}
+/* boilerplate CSS with header and basic start styles */
+:root {
+   --lightest-color: ghostwhite;
+   --light-color: #ffffff;
+   --highlight-color: #1c658c;
+   --secondary-highlight-color: darkorange;
+   --dark-color: #154751;
+   --darkest-color: black;
+}
+
+/* HEADER STYLES */
+.header {
+   display: flex;
+   width: 100%;
+   margin: 5px auto;
+   border-bottom: 1px solid lightgrey;
+}
+.logo {
+   width: 30%;
+}
+.logo > img {
+   width: 7rem;
+   height: 3rem;
+   object-fit: cover;
+}
+.nav-items {
+   width: 70%;
+   display: flex;
+   justify-content: flex-end;
+   align-items: center;
+}
+.nav-items > ul {
+   display: flex;
+   list-style: none;
+   padding-right: 15px;
+}
+.nav-items > ul > li {
+   margin-left: 10px;
+   font-weight: 600;
+}
+
+/* BODY */
+.body {
+   /* border: 1px solid grey; */
+}
+
+/* SEARCH */
+.searchWrap {
+   display: flex;
+   justify-content: center;
+   margin: 1rem auto;
+   width: 80%;
+}
+.searchWrap > input {
+   width: 70%;
+   height: 2.3rem;
+   border: 1px solid gray;
+   border-radius: 10px;
+   font-weight: 800;
+   font-size: 1rem;
+   padding-left: 10px;
+}
+
+.searchWrap > button {
+   width: 30%;
+   height: 2.3rem;
+   border: 1px solid gray;
+   border-radius: 10px;
+   font-weight: 800;
+   font-size: 1rem;
+}
+.filters {
+   display: flex;
+   justify-content: center;
+}
+.filters > button {
+   width: 10%;
+   height: 2.3rem;
+   border: 1px solid gray;
+   border-radius: 10px;
+   font-weight: 800;
+   font-size: 1rem;
+   background-color: lightgray;
+}
+.filters > button:hover,
+.searchWrap > button {
+   cursor: pointer;
+}
+.restaurantContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+
+/* CARD */
+.restaurantCard {
+   border: 1px solid grey;
+   background-color: #f0f0f0;
+   width: 18rem;
+   max-height: 21rem;
+   /* height: fit-content; */
+   /* height: 20rem; */
+   padding: 0.5rem;
+   margin: 0.9rem;
+   border-radius: 10px;
+}
+.restaurantCard:hover {
+   cursor: pointer;
+}
+.image {
+   height: 60%;
+   overflow: hidden;
+}
+.image img {
+   width: 100%;
+   object-fit: cover;
+   height: 100%;
+   border-radius: 10px;
+}
+.details {
+   height: 40%;
+}
+.cuisineList,
+.resTitle {
+   white-space: nowrap;
+   overflow: hidden;
 }
