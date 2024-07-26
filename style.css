@@ -100,7 +100,23 @@
    flex-wrap: wrap;
    justify-content: center;
 }
-
+/* SHIMMER STYLES */
+.shimmerContainer {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: center;
+}
+.shimmerItem {
+   border: 1px solid lightgray;
+   background-color: #f0f0f0;
+   width: 18rem;
+   height: 18rem;
+   /* height: fit-content; */
+   /* height: 20rem; */
+   padding: 0.5rem;
+   margin: 0.9rem;
+   border-radius: 10px;
+}
 /* CARD */
 .restaurantCard {
    border: 1px solid grey;
