@@ -9,8 +9,10 @@ const Body = () => {
    let [searchedRes, setSearchedRes] = useState([]);
    let [searchText, setSearchText] = useState("");
 
+   // console.log("BODY COMPONENT RENDERED");
    useEffect(() => {
       apiCall();
+      console.log("useEffect Inside BODY has been called");
    }, []);
 
    // ! FOR CALLING API
@@ -28,7 +30,6 @@ const Body = () => {
             ?.restaurants
       );
    };
-
    // ! FILTER BY RATING
    function topRatedRes(e) {
       // if (e.target.id == "true") {
@@ -38,16 +39,16 @@ const Body = () => {
       //    e.target.style.border = "1px solid grey";
       //    e.target.style.transitionDelay = "300ms";
       // } else {
-         e.target.id = "true";
-         let arr = searchedRes.filter((res) => res?.info?.avgRating > 4);
-         setSearchedRes(arr);
-         e.target.style.backgroundColor = "lightgreen";
-         e.target.style.border = "2px solid black";
-         e.target.style.transitionDelay = "100ms";
-         console.log(arr.length);
+      e.target.id = "true";
+      let arr = searchedRes.filter((res) => res?.info?.avgRating > 4);
+      setSearchedRes(arr);
+      e.target.style.backgroundColor = "lightgreen";
+      e.target.style.border = "2px solid black";
+      e.target.style.transitionDelay = "100ms";
+      console.log(arr.length);
       // }
    }
-
+   // * SEARCH BTN FN
    let searchBtnFn = () => {
       if (searchText.length > 0) {
          const newRes2 = listOfRes.filter((res) => {
