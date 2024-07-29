@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
 import { useState, useEffect } from "react";
-import Shimmer from "./shimmerUI/shimmer";
+import Shimmer from "./shimmerUI/Shimmer";
 
 const Body = () => {
    //Creating State Variable , Super powerful variables

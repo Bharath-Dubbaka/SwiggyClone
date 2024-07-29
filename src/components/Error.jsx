@@ -6,9 +6,9 @@ const Error = () => {
    return (
       <div className="errorPage">
          <h1>Oops!!! Something went Wrong</h1>
-         <h3>
+         <h2>
             {err.status} / {err.statusText}
-         </h3>
+         </h2>
          <h3>{err.error.message}</h3>
       </div>
    );

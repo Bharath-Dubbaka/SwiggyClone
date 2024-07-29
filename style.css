@@ -6,6 +6,7 @@
    margin: 0;
    font-family: "Poppins", sans-serif;
    box-sizing: border-box;
+   background-color: #ffffff;
 }
 /* boilerplate CSS with header and basic start styles */
 :root {
@@ -27,7 +28,7 @@
 .logo {
    width: 30%;
 }
-.logo > img {
+#resImage {
    width: 7rem;
    height: 3rem;
    object-fit: cover;
@@ -47,6 +48,10 @@
 .nav-items > ul > li {
    margin-left: 1.5rem;
    font-weight: 600;
+}
+a {
+   text-decoration: none;
+   color: black;
 }
 .loginLogoutBtn {
    width: 5rem;
@@ -127,7 +132,7 @@
 }
 /* CARD */
 .restaurantCard {
-   border: 1px solid grey;
+   border: 1px solid lightgray;
    background-color: #f0f0f0;
    width: 18rem;
    max-height: 21rem;
@@ -136,9 +141,15 @@
    padding: 0.5rem;
    margin: 0.9rem;
    border-radius: 10px;
+   background: #ffffff;
+   box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #ffffff;
 }
 .restaurantCard:hover {
    cursor: pointer;
+   transition-duration: 200ms;
+   border: 1px solid rgb(190, 190, 190);
+   background: #ffffff;
+   box-shadow: 10px 10px 40px #9e9e9e, -10px -10px 40px #ffffff;
 }
 .image {
    height: 60%;
@@ -165,4 +176,95 @@
    justify-content: center;
    align-items: center;
    margin: 10rem auto;
+}
+.aboutPage {
+   margin: 2rem auto;
+}
+
+/* RES MENU STYLES */
+.menuContainer {
+   display: flex;
+   flex-direction: column;
+   /* text-align: center; */
+   width: 80%;
+   margin: auto;
+   padding: 2rem 5rem;
+}
+.resMenuName {
+   align-items: start;
+   display: flex;
+   font-size: 1.5rem;
+   font-weight: 800;
+   /* margin: 0.5rem 0; */
+}
+.subMenuWrap {
+   border: 1px lightgray solid;
+   border-radius: 10px;
+   padding: 1rem;
+   border-radius: 28px;
+   background: #ffffff;
+   box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+   margin: 0.5rem 0;
+}
+.ratingMenuWrap {
+   display: flex;
+   font-size: 1.1rem;
+   font-weight: 800;
+}
+.rating {
+   margin-right: 5px;
+}
+.mainGenre {
+   color: #ff5512;
+   font-weight: 600;
+   text-decoration: underline;
+}
+
+/* 2nd card */
+.subMenuWrap > .recommended {
+   font-size: 1.1rem;
+   font-weight: 800;
+   margin-bottom: 1rem;
+}
+.menuItemsWrap {
+   margin: 0.5rem 0;
+}
+.menuItems {
+   display: flex;
+   border-bottom: 1px solid lightgray;
+   margin-bottom: 1rem;
+   padding-bottom: 1rem;
+   width: 100%;
+   height: 10rem;
+   justify-content: space-between;
+   overflow: hidden;
+}
+.menuItemsDetails {
+   /* display: flex; */
+   /* height: 5rem; */
+   width: 75%;
+}
+.menuItemsImg {
+   /* display: flex; */
+   /* height: 5rem; */
+   width: 20%;
+}
+
+.itemName {
+   font-weight: 600;
+}
+.itemPrice {
+   font-weight: 600;
+}
+.itemRating {
+   display: flex;
+}
+.itemDescription {
+   color: rgb(126, 126, 126);
+}
+.menuItemsImg img {
+   object-fit: cover;
+   height: 8rem;
+   width: 100%;
+   border-radius: 12px;
 }
