@@ -7,4 +7,4 @@ export const LOGO_MAIN =
    "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQdaMYtVi9_tfNcpsbGGseU6ehYgV9UeU3h7A&s";
 
 export const RES_MENU_LINK =
-   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.448489&lng=78.52978&restaurantId=439670&catalog_qa=undefined&submitAction=ENTER";
+   "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=17.448489&lng=78.52978&restaurantId=";

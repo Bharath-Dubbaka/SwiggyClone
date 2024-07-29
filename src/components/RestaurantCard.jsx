@@ -1,5 +1,4 @@
 import { IMG_CDN } from "../../utils/constants";
-import { Link } from "react-router-dom";
 import RestaurantMenu from "./RestaurantMenu";
 
 const RestaurantCard = ({ resData }) => {
@@ -15,9 +14,8 @@ const RestaurantCard = ({ resData }) => {
       id,
       // id,
    } = resData?.info;
-   console.log(resData?.info?.id, "resId");
+   // console.log(resData?.info?.id, "resId");
    return (
-      <Link to={"/restaurant/" + id}>
          <div className="restaurantCard">
             <div className="image">
                <img src={IMG_CDN + cloudinaryImageId} alt="Res Image" />
@@ -32,7 +30,6 @@ const RestaurantCard = ({ resData }) => {
                <div className="cuisineList">{cuisines.join(", ")}</div>
             </div>
          </div>
-      </Link>
    );
 };
 

@@ -2,6 +2,7 @@ import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmerUI/Shimmer";
+import { Link } from "react-router-dom";
 
 const Body = () => {
    //Creating State Variable , Super powerful variables
@@ -96,7 +97,17 @@ const Body = () => {
          </div>
          <div className="restaurantContainer">
             {searchedRes.map((item) => {
-               return <RestaurantCard resData={item} key={item?.info?.id} />;
+               return (
+                  <Link
+                     to={"/restaurant/" + item?.info?.id}
+                     key={item?.info?.id}
+                  >
+                     {/* keys should be given to the top most elem in mapping, as Link is top parent, 
+                     if we give key tp ResCard and delete it .. 
+                     it may result into delete ResCard compo but not the Link which is wrapped around */}
+                     <RestaurantCard resData={item} />
+                  </Link>
+               );
             })}
          </div>
       </div>

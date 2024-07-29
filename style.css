@@ -158,7 +158,7 @@ a {
 .image img {
    width: 100%;
    object-fit: cover;
-   height: 100%;
+   height: 11rem;
    border-radius: 10px;
 }
 .details {
@@ -219,7 +219,9 @@ a {
    font-weight: 600;
    text-decoration: underline;
 }
-
+.rowsAlign {
+   margin: 0.3rem 0;
+}
 /* 2nd card */
 .subMenuWrap > .recommended {
    font-size: 1.1rem;
