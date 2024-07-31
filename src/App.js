@@ -3,6 +3,8 @@ import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import About from "./components/About";
+// for experiment of class components
+import AboutClass from "./components/classCompo/AboutClass";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
@@ -30,6 +32,8 @@ const appRoutes = createBrowserRouter([
          {
             path: "/about",
             element: <About />,
+            // for experiment of class components
+            // element: <AboutClass />,
          },
          {
             path: "/contact",

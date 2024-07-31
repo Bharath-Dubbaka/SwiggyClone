@@ -13,11 +13,15 @@
    --lightest-color: ghostwhite;
    --light-color: #ffffff;
    --highlight-color: #1c658c;
-   --secondary-highlight-color: darkorange;
+   --app-highlight-color: #f3640b;
    --dark-color: #154751;
    --darkest-color: black;
 }
-
+/* TO REMOVE ALL THE STYLES ON LINK ELems which are converted into a/anchor Tag */
+a {
+   text-decoration: none;
+   color: black;
+}
 /* HEADER STYLES */
 .header {
    display: flex;
@@ -49,16 +53,21 @@
    margin-left: 1.5rem;
    font-weight: 600;
 }
-a {
-   text-decoration: none;
-   color: black;
+.nav-items > ul > li :hover {
+   color: var(--app-highlight-color);
 }
+
 .loginLogoutBtn {
    width: 5rem;
    font-size: 1rem;
    font-weight: 800;
    padding: 5px;
    border-radius: 10px;
+   color: var(--app-highlight-color);
+}
+.loginLogoutBtn:hover {
+   color: var(--darkest-color);
+   border: 1px solid var(--app-highlight-color);
 }
 
 /* BODY */
@@ -91,6 +100,10 @@ a {
    font-weight: 800;
    font-size: 1rem;
 }
+.searchWrap > button:hover {
+   border: 1px solid var(--app-highlight-color);
+   color: var(--app-highlight-color);
+}
 .filters {
    display: flex;
    justify-content: center;
@@ -104,7 +117,10 @@ a {
    font-size: 1rem;
    background-color: lightgray;
 }
-.filters > button:hover,
+.filters > button:hover {
+   color: var(--app-highlight-color);
+   cursor: pointer;
+}
 .searchWrap > button {
    cursor: pointer;
 }
@@ -215,7 +231,7 @@ a {
    margin-right: 5px;
 }
 .mainGenre {
-   color: #ff5512;
+   color: var(--app-highlight-color);
    font-weight: 600;
    text-decoration: underline;
 }

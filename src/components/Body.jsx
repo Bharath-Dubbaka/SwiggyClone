@@ -43,8 +43,9 @@ const Body = () => {
       e.target.id = "true";
       let arr = searchedRes.filter((res) => res?.info?.avgRating > 4);
       setSearchedRes(arr);
-      e.target.style.backgroundColor = "lightgreen";
-      e.target.style.border = "2px solid black";
+      e.target.style.backgroundColor = "ghostwhite";
+      e.target.style.color = "#F3640B";
+      e.target.style.border = "2px solid #F3640B";
       e.target.style.transitionDelay = "100ms";
       console.log(arr.length);
       // }
@@ -62,6 +63,8 @@ const Body = () => {
          apiCall();
       }
    };
+
+   // ? USING SHIMMER UN TILL DATA AND SET IN USE STATE
    // CONDITIONAL RENDER THE COMPONENT USING TERNARY OPERATOR
    return listOfRes.length == 0 ? (
       <Shimmer />

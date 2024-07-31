@@ -13,6 +13,7 @@ const RestaurantMenu = () => {
       console.log("USEEFEECT WORKING IN MENUCARD");
    }, []);
 
+   // ! FOR CALLING API WITH THE RestaurantID using useParams HOOK get DynamicURL on
    const callMenuAPI = async () => {
       let response = await fetch(RES_MENU_LINK + resIdFromURL.resId);
       let jsonData = await response.json();
@@ -22,8 +23,9 @@ const RestaurantMenu = () => {
 
    console.log("Menu component Re-rendered");
 
+   // ? USING SHIMMER UN TILL DATA AND SET IN USE STATE
    if (menuData == null) return <Shimmer />;
-   
+
    const {
       avgRating,
       totalRatingsString,
