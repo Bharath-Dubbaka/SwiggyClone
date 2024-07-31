@@ -3,12 +3,14 @@ import resList from "../../utils/mockData";
 import { useState, useEffect } from "react";
 import Shimmer from "./shimmerUI/Shimmer";
 import { Link } from "react-router-dom";
+import useStatus from "../../utils/cusHooks/useStatus";
 
 const Body = () => {
    //Creating State Variable , Super powerful variables
    let [listOfRes, setListOfRes] = useState([]);
    let [searchedRes, setSearchedRes] = useState([]);
    let [searchText, setSearchText] = useState("");
+   const onlineStatus = useStatus();
 
    // console.log("BODY COMPONENT RENDERED");
    useEffect(() => {
@@ -63,6 +65,8 @@ const Body = () => {
          apiCall();
       }
    };
+
+   if (!onlineStatus) return <h1>NO INTERNET</h1>;
 
    // ? USING SHIMMER UN TILL DATA AND SET IN USE STATE
    // CONDITIONAL RENDER THE COMPONENT USING TERNARY OPERATOR

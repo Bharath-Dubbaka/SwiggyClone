@@ -1,25 +1,15 @@
-import { useEffect, useState } from "react";
 import { RES_MENU_LINK, MENUITEM_IMG_CDN } from "../../utils/constants";
 import Shimmer from "./shimmerUI/Shimmer";
 import { useParams } from "react-router-dom";
+import useResMenu from "../../utils/cusHooks/useResMenu";
 
 const RestaurantMenu = () => {
-   const [menuData, setMenuData] = useState(null);
+   // const [menuData, setMenuData] = useState(null);
    const resIdFromURL = useParams();
-   // console.log(resIdFromURL);
+   //// console.log(resIdFromURL);
 
-   useEffect(() => {
-      callMenuAPI();
-      console.log("USEEFEECT WORKING IN MENUCARD");
-   }, []);
-
-   // ! FOR CALLING API WITH THE RestaurantID using useParams HOOK get DynamicURL on
-   const callMenuAPI = async () => {
-      let response = await fetch(RES_MENU_LINK + resIdFromURL.resId);
-      let jsonData = await response.json();
-      setMenuData(jsonData?.data);
-      // console.log(jsonData?.data?.cards[2]);
-   };
+   // * USING CUSTOM HOOK TO FETCH DATA AND SEND OVER
+   const menuData = useResMenu(resIdFromURL)
 
    console.log("Menu component Re-rendered");
 
@@ -38,7 +28,7 @@ const RestaurantMenu = () => {
    const { itemCards } =
       menuData?.cards[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards[2]?.card
          ?.card;
-   // console.log("AFTER SHIMMER itemCards", itemCards);
+   //// console.log("AFTER SHIMMER itemCards", itemCards);
 
    return (
       <div className="menuContainer">
