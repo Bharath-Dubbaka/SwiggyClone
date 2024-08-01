@@ -286,3 +286,17 @@ a {
    width: 100%;
    border-radius: 12px;
 }
+.promotedLabel {
+   width: fit-content;
+   /* opacity: 50%; */
+   background: rgb(255 255 255 / 10%);
+   font-weight: 900;
+   position: absolute;
+   top: -9px;
+   left: 6px;
+}
+
+.promotedWrap {
+   position: relative;
+   /* top: -24px; */
+}

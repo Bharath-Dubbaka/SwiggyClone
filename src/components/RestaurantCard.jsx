@@ -16,21 +16,33 @@ const RestaurantCard = ({ resData }) => {
    } = resData?.info;
    // console.log(resData?.info?.id, "resId");
    return (
-         <div className="restaurantCard">
-            <div className="image">
-               <img src={IMG_CDN + cloudinaryImageId} alt="Res Image" />
-            </div>
-            <div className="details">
-               <h3 className="resTitle">{name}</h3>
-               <div>{avgRating} Stars</div>
-               <div>{costForTwo}</div>
-               <div>
-                  {sla.deliveryTime} Mins, {sla.lastMileTravelString} Away
-               </div>
-               <div className="cuisineList">{cuisines.join(", ")}</div>
-            </div>
+      <div className="restaurantCard">
+         <div className="image">
+            <img src={IMG_CDN + cloudinaryImageId} alt="Res Image" />
          </div>
+         <div className="details">
+            <h3 className="resTitle">{name}</h3>
+            <div>{avgRating} Stars</div>
+            <div>{costForTwo}</div>
+            <div>
+               {sla.deliveryTime} Mins, {sla.lastMileTravelString} Away
+            </div>
+            <div className="cuisineList">{cuisines.join(", ")}</div>
+         </div>
+      </div>
    );
+};
+
+// HOC to wrap promoted label on resItems
+export const withPromotedLabel = (RestaurantCard) => {
+   return (props) => {
+      return (
+         <div className="promotedWrap">
+            <div className="promotedLabel">🔥</div>
+            <RestaurantCard {...props} />
+         </div>
+      );
+   };
 };
 
 export default RestaurantCard;

@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import Shimmer from "./shimmerUI/Shimmer";
 import { Link } from "react-router-dom";
 import useStatus from "../../utils/cusHooks/useStatus";
+import { withPromotedLabel } from "./RestaurantCard";
 
 const Body = () => {
    //Creating State Variable , Super powerful variables
@@ -11,6 +12,8 @@ const Body = () => {
    let [searchedRes, setSearchedRes] = useState([]);
    let [searchText, setSearchText] = useState("");
    const onlineStatus = useStatus();
+
+   const PromotedResCard = withPromotedLabel(RestaurantCard);
 
    // console.log("BODY COMPONENT RENDERED");
    useEffect(() => {
@@ -28,6 +31,7 @@ const Body = () => {
          jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
             ?.restaurants
       );
+      // console.log("listOfRes of sertted", listOfRes);
       setSearchedRes(
          jsonData?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
             ?.restaurants
@@ -67,7 +71,7 @@ const Body = () => {
    };
 
    if (!onlineStatus) return <h1>NO INTERNET</h1>;
-
+   console.log(searchedRes, "searchedRes");
    // ? USING SHIMMER UN TILL DATA AND SET IN USE STATE
    // CONDITIONAL RENDER THE COMPONENT USING TERNARY OPERATOR
    return listOfRes.length == 0 ? (
@@ -112,7 +116,12 @@ const Body = () => {
                      {/* keys should be given to the top most elem in mapping, as Link is top parent, 
                      if we give key tp ResCard and delete it .. 
                      it may result into delete ResCard compo but not the Link which is wrapped around */}
-                     <RestaurantCard resData={item} />
+
+                     {item?.info?.avgRating >= 4.5 ? (
+                        <PromotedResCard resData={item} />
+                     ) : (
+                        <RestaurantCard resData={item} />
+                     )}
                   </Link>
                );
             })}
