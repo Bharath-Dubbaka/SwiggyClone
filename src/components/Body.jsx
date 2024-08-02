@@ -71,7 +71,7 @@ const Body = () => {
    };
 
    if (!onlineStatus) return <h1>NO INTERNET</h1>;
-   console.log(searchedRes, "searchedRes");
+
    // ? USING SHIMMER UN TILL DATA AND SET IN USE STATE
    // CONDITIONAL RENDER THE COMPONENT USING TERNARY OPERATOR
    return listOfRes.length == 0 ? (

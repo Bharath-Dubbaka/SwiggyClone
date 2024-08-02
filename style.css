@@ -71,9 +71,8 @@ a {
 }
 
 /* BODY */
-.body {
-   /* border: 1px solid grey; */
-}
+/* .body {
+} */
 
 /* SEARCH */
 .searchWrap {
@@ -216,7 +215,7 @@ a {
 .subMenuWrap {
    border: 1px lightgray solid;
    border-radius: 10px;
-   padding: 1rem;
+   padding: 1rem 1rem 0 1rem;
    border-radius: 28px;
    background: #ffffff;
    box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
@@ -230,6 +229,9 @@ a {
 .rating {
    margin-right: 5px;
 }
+#duration {
+   margin: 0 0 1rem 0;
+}
 .mainGenre {
    color: var(--app-highlight-color);
    font-weight: 600;
@@ -239,24 +241,38 @@ a {
    margin: 0.3rem 0;
 }
 /* 2nd card */
-.subMenuWrap > .recommended {
-   font-size: 1.1rem;
+.subMenuWrap > .subHeading {
+   display: flex;
+   justify-content: space-between;
+   font-size: 1.25rem;
    font-weight: 800;
-   margin-bottom: 1rem;
+   margin-bottom: 1.5rem;
+   width: 100%;
+   cursor: pointer;
+}
+.detailsSubHeading {
+   width: 78%;
+}
+.downArrow {
+   width: 20%;
+   padding-right: 2rem;
+   display: flex;
+   justify-content: flex-end;
 }
 .menuItemsWrap {
-   margin: 0.5rem 0;
+   margin: 0.5rem 0 0 0;
 }
 .menuItems {
-   display: flex;
    border-bottom: 1px solid lightgray;
-   margin-bottom: 1rem;
-   padding-bottom: 1rem;
+   display: flex;
+   margin-top: 1.5rem;
+   padding-bottom: 0;
    width: 100%;
    height: 10rem;
    justify-content: space-between;
    overflow: hidden;
 }
+
 .menuItemsDetails {
    /* display: flex; */
    /* height: 5rem; */
@@ -266,8 +282,17 @@ a {
    /* display: flex; */
    /* height: 5rem; */
    width: 20%;
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center; */
+   align-items: center;
 }
-
+.menuItemsImg img {
+   object-fit: cover;
+   height: 8rem;
+   width: 100%;
+   border-radius: 12px;
+}
 .itemName {
    font-weight: 600;
 }
@@ -280,12 +305,7 @@ a {
 .itemDescription {
    color: rgb(126, 126, 126);
 }
-.menuItemsImg img {
-   object-fit: cover;
-   height: 8rem;
-   width: 100%;
-   border-radius: 12px;
-}
+
 .promotedLabel {
    width: fit-content;
    /* opacity: 50%; */
@@ -299,4 +319,17 @@ a {
 .promotedWrap {
    position: relative;
    /* top: -24px; */
+}
+
+.addBtn {
+   /* text-align: center; */
+   border-radius: 8px;
+   width: 50%;
+   position: relative;
+   top: -14px;
+   /* left: 48px; */
+   border: 2px var(--app-highlight-color) solid;
+   height: 2rem;
+   font-weight: 900;
+   cursor: pointer;
 }
