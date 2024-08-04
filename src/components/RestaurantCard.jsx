@@ -1,5 +1,6 @@
 import { IMG_CDN } from "../../utils/constants";
-import RestaurantMenu from "./RestaurantMenu";
+import UserContext from "../../utils/contextData/UserContext";
+import { useContext } from "react";
 
 const RestaurantCard = ({ resData }) => {
    const {
@@ -14,6 +15,8 @@ const RestaurantCard = ({ resData }) => {
       id,
       // id,
    } = resData?.info;
+   // const userLoginData = useContext(UserContext);
+
    // console.log(resData?.info?.id, "resId");
    return (
       <div className="restaurantCard">
@@ -28,6 +31,7 @@ const RestaurantCard = ({ resData }) => {
                {sla.deliveryTime} Mins, {sla.lastMileTravelString} Away
             </div>
             <div className="cuisineList">{cuisines.join(", ")}</div>
+            {/* <div>{userLoginData?.loginName}</div> */}
          </div>
       </div>
    );

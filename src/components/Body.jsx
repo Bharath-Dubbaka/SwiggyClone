@@ -1,17 +1,21 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import Shimmer from "./shimmerUI/Shimmer";
 import { Link } from "react-router-dom";
 import useStatus from "../../utils/cusHooks/useStatus";
 import { withPromotedLabel } from "./RestaurantCard";
+import UserContext from "../../utils/contextData/UserContext";
 
 const Body = () => {
    //Creating State Variable , Super powerful variables
    let [listOfRes, setListOfRes] = useState([]);
    let [searchedRes, setSearchedRes] = useState([]);
    let [searchText, setSearchText] = useState("");
+   // let [inputUserName, setInputUserName] = useState("");
    const onlineStatus = useStatus();
+
+   const { setUserName, userName } = useContext(UserContext);
 
    const PromotedResCard = withPromotedLabel(RestaurantCard);
 
@@ -84,6 +88,7 @@ const Body = () => {
                value={searchText}
                onChange={(e) => {
                   setSearchText(e.target.value);
+                  setSearchText(e.target.value);
                }}
             />
             <button
@@ -106,6 +111,18 @@ const Body = () => {
                4+ stars
             </button>
          </div>
+         {/* contextExperiment */}
+         {/* <div className="contextExperiment">
+            <input
+               type="text"
+               // value={inputUserName}
+               value={userName}
+               onChange={(e) => {
+                  // setInputUserName(e.target.value);
+                  setUserName(e.target.value);
+               }}
+            />
+         </div> */}
          <div className="restaurantContainer">
             {searchedRes.map((item) => {
                return (

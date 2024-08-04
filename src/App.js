@@ -1,4 +1,4 @@
-import React, { lazy, Suspense } from "react";
+import React, { lazy, Suspense, useContext, useEffect, useState } from "react";
 import ReactDOM from "react-dom/client";
 import Header from "./components/Header";
 import Body from "./components/Body";
@@ -9,6 +9,7 @@ import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/shimmerUI/Shimmer";
+import UserContext from "../utils/contextData/UserContext";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => {
@@ -16,6 +17,28 @@ const About = lazy(() => {
 });
 
 const AppLayout = () => {
+   // This commented code is to test/emulate the updating the context data
+   // const [userName, setUserName] = useState(null); // tying userContext to State variable
+   // useEffect(() => {
+   //    const someDummyUserName = {
+   //       name: "Elon Musk",
+   //    };
+   //    setUserName(someDummyUserName?.name);
+   // }, []);
+
+   // console.log(userName, "userName");
+   // return (
+   //    // passing setUsername as 2nd value and it can also be used in same way, but to update the value
+   //    <UserContext.Provider value={{ loginName: userName, setUserName }}>
+   //       <div className="app">
+   //          <Header />
+   //          {/* <UserContext.Provider value={{ loginName: "John Doe" }}> */}
+   //          <Outlet />
+   //          {/* </UserContext.Provider> */}
+   //       </div>
+   //    </UserContext.Provider>
+   // )
+   //
    return (
       <div className="app">
          <Header />

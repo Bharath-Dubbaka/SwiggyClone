@@ -1,11 +1,13 @@
 import { LOGO_MAIN } from "../../utils/constants";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useStatus from "../../utils/cusHooks/useStatus";
+import UserContext from "../../utils/contextData/UserContext";
 
 const Header = () => {
    let [toggleLogin, setToggleLogin] = useState("Login");
    const onlineStatus = useStatus();
+   const userLoginData = useContext(UserContext);
 
    return (
       <div className="header">
@@ -16,7 +18,10 @@ const Header = () => {
          </div>
          <div className="nav-items">
             <ul>
-               <li>OnlineStatus: {onlineStatus ? "🟢" : "🔴"}</li>
+               <li>Online: {onlineStatus ? "🟢" : "🔴"}</li>
+               {toggleLogin === "Logout" ? (
+                  <li>Hi, {userLoginData.loginName}</li>
+               ) : null}
                <li>
                   <Link to="/">Home</Link>
                </li>
