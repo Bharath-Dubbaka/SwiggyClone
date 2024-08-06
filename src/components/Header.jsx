@@ -3,11 +3,17 @@ import { useState, useContext } from "react";
 import { Link } from "react-router-dom";
 import useStatus from "../../utils/cusHooks/useStatus";
 import UserContext from "../../utils/contextData/UserContext";
+import { useSelector } from "react-redux";
 
 const Header = () => {
    let [toggleLogin, setToggleLogin] = useState("Login");
    const onlineStatus = useStatus();
    const userLoginData = useContext(UserContext);
+   // READING DATA FROM STORE USING SELECTORS HOOK (Subscribing to the store)
+   const cartItems = useSelector((store) => {
+      return store.cart.items;
+   });
+   console.log(cartItems);
 
    return (
       <div className="header">
@@ -33,7 +39,10 @@ const Header = () => {
                   {/* <Link to="/about">AboutClass Us</Link> */}
                </li>
                <li>
-                  <Link to="/cart">Cart</Link>
+                  <Link to="/cart">
+                     Cart
+                     {cartItems.length > 0 ? `  (${cartItems.length})` : null}
+                  </Link>
                </li>
                <li>
                   <button

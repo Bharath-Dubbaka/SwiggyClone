@@ -10,6 +10,9 @@ import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import Shimmer from "./components/shimmerUI/Shimmer";
 import UserContext from "../utils/contextData/UserContext";
+import { Provider } from "react-redux";
+import appStore from "../utils/store/appStore";
+import Cart from "./components/Cart";
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => {
@@ -40,10 +43,12 @@ const AppLayout = () => {
    // )
    //
    return (
-      <div className="app">
-         <Header />
-         <Outlet />
-      </div>
+      <Provider store={appStore}>
+         <div className="app">
+            <Header />
+            <Outlet />
+         </div>
+      </Provider>
    );
 };
 
@@ -74,6 +79,10 @@ const appRoutes = createBrowserRouter([
                   <Grocery />
                </Suspense>
             ),
+         },
+         {
+            path: "/cart",
+            element: <Cart />,
          },
          // Dynamic Routes
          {

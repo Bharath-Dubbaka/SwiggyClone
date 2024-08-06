@@ -1,10 +1,17 @@
 import React from "react";
 import { MENUITEM_IMG_CDN, RES_MENU_LINK } from "../../utils/constants";
+import { addItem } from "../../utils/store/cartSlice";
+import { useDispatch, useDispatch } from "react-redux";
 
 const ResItems = ({ items }) => {
+   //UPDATING THE STORE USING DISPATCH HOOK FOR ACTIONS
+   const dispatch = useDispatch();
+   const handleAddItem = (item) => {
+      dispatch(addItem(item));
+   };
    return (
       <div className="menuItemsWrap">
-         <div className="menuItems" >
+         <div className="menuItems">
             <div className="menuItemsDetails">
                <div className="itemName">{items?.card?.info?.name}</div>
                <div className="itemPrice">
@@ -36,7 +43,9 @@ const ResItems = ({ items }) => {
                   src={MENUITEM_IMG_CDN + items?.card?.info?.imageId}
                   alt=""
                />
-               <button className="addBtn">Add+</button>
+               <button className="addBtn" onClick={() => handleAddItem(items)}>
+                  Add+
+               </button>
             </div>
          </div>
       </div>
