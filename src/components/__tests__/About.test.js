@@ -10,7 +10,7 @@ test("Should test About compo is loading correctly", () => {
    expect(heading).toBeInTheDocument();
 });
 
-test("Should haveTwoInputs in About compo", () => {
+test("Should have TwoInputs in About compo", () => {
    render(<About />);
    // query
    const inputs = screen.getAllByRole("textbox");
