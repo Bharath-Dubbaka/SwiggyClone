@@ -3,16 +3,17 @@ import React from "react";
 // import { useContext } from "react";
 
 const About = () => {
-   let userLoginData //= useContext(UserContext);
+   let userLoginData; //= useContext(UserContext);
    return (
       <div className="aboutPage">
          <h1>About Us:</h1>
          <p>Mission</p>
          <p>
-            Hey: {userLoginData ? userLoginData?.loginName : null}, Our mission
-            is to elevate the quality of life of the urban consumer by offering
-            unparalleled convenience. Convenience is what makes us tick. It’s
-            what makes us get out of bed and say, “Let’s do this.”{" "}
+            Hey:
+            {/* {userLoginData ? userLoginData?.loginName : null},  */}
+            Our mission is to elevate the quality of life of the urban consumer
+            by offering unparalleled convenience. Convenience is what makes us
+            tick. It’s what makes us get out of bed and say, “Let’s do this.”{" "}
          </p>
          <p>Industry pioneer </p>
          <p>
@@ -23,6 +24,9 @@ const About = () => {
             hyperlocal commerce and as a brand synonymous with the categories it
             is present in.
          </p>
+         <p>Contact Us for more</p>
+         <input type="text" />
+         <input type="text" />
       </div>
    );
 };
