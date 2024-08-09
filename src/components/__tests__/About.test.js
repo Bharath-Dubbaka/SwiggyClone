@@ -14,7 +14,7 @@ test("Should have TwoInputs in About compo", () => {
    render(<About />);
    // query
    const inputs = screen.getAllByRole("textbox");
-   //Assertion
+   //Assertion 
    expect(inputs.length).toBe(2);
 });
 

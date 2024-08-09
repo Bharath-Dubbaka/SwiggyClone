@@ -19,7 +19,7 @@ const RestaurantCard = ({ resData }) => {
 
    // console.log(resData?.info?.id, "resId");
    return (
-      <div className="restaurantCard">
+      <div data-testid="testCards" className="restaurantCard">
          <div className="image">
             <img src={IMG_CDN + cloudinaryImageId} alt="Res Image" />
          </div>
