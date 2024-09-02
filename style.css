@@ -333,3 +333,12 @@ a {
    font-weight: 900;
    cursor: pointer;
 }
+
+.clearBtn {
+   width: 10rem;
+   border-radius: 10px;
+   border-color: darkorange;
+   height: 2rem;
+   font-weight: 900;
+   margin-bottom: 1rem;
+}

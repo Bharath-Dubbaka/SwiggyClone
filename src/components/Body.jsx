@@ -44,22 +44,22 @@ const Body = () => {
    };
    // ! FILTER BY RATING
    function topRatedRes(e) {
-      // if (e.target.id == "true") {
-      //    e.target.id = "false";
-      //    apiCall();
-      //    e.target.style.backgroundColor = "lightgray";
-      //    e.target.style.border = "1px solid grey";
-      //    e.target.style.transitionDelay = "300ms";
-      // } else {
-      e.target.id = "true";
-      let arr = searchedRes.filter((res) => res?.info?.avgRating > 4);
-      setSearchedRes(arr);
-      e.target.style.backgroundColor = "ghostwhite";
-      e.target.style.color = "#F3640B";
-      e.target.style.border = "2px solid #F3640B";
-      e.target.style.transitionDelay = "100ms";
-      console.log(arr.length);
-      // }
+      if (e.target.id == "true") {
+         e.target.id = "false";
+         apiCall();
+         e.target.style.backgroundColor = "lightgray";
+         e.target.style.border = "1px solid grey";
+         e.target.style.transitionDelay = "300ms";
+      } else {
+         e.target.id = "true";
+         let arr = searchedRes.filter((res) => res?.info?.avgRating > 4.5);
+         setSearchedRes(arr);
+         e.target.style.backgroundColor = "ghostwhite";
+         e.target.style.color = "#F3640B";
+         e.target.style.border = "2px solid #F3640B";
+         e.target.style.transitionDelay = "100ms";
+         console.log(arr.length);
+      }
    }
    // * SEARCH BTN FN
    let searchBtnFn = () => {
@@ -89,7 +89,6 @@ const Body = () => {
                value={searchText}
                onChange={(e) => {
                   setSearchText(e.target.value);
-                  setSearchText(e.target.value);
                }}
             />
             <button
@@ -100,8 +99,6 @@ const Body = () => {
             >
                Search
             </button>
-         </div>
-         <div className="filters">
             <button
                type="button"
                id="false"
@@ -112,6 +109,7 @@ const Body = () => {
                4+ stars
             </button>
          </div>
+
          {/* contextExperiment */}
          {/* <div className="contextExperiment">
             <input
