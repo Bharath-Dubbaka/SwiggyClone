@@ -3,8 +3,24 @@
 
 [Live Demo](https://swigclone.netlify.app/)
 
-**Description:**  
+**Description:**  This is using Real-time production data directly from Swiggy API, so make sure you use CORS extension and enable it 
+
 **Features:**  
+React: Reusable Components, HOC, and custom hooks
+Debouncing: Search Bar with debouncing technique and filters
+Routing: react-router-dom for navigation
+Parcel: for bundler for faster code process.
+Redux: Cart Functionalities: add, remove, and increment or decrement of the product & the checkout option.
+Lazy Loading: Chunking/Code splitting with the use of lazy loading and Suspense from react
+Config-driven UI: Real-time data directly from Swiggy API
+Shimmer: for Loadings and better UI/UX
+Testing: Jest and react-testing-library (Unit and Integration Testing)
+
+🔥 Tech Stack:
+React
+Redux
+JavaScript
+Testing: Jest and react-testing-library (Unit and Integration Testing)
 
 ## Installation
 
@@ -54,5 +70,5 @@ npm run watch-test
 ```
 
 ---
-
+***This is using Real-time production data directly from Swiggy API, so make sure you use CORS extension and enable it 
 Feel free to customize further if needed!
