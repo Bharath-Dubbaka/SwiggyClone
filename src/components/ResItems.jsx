@@ -2,9 +2,11 @@ import React from "react";
 import { MENUITEM_IMG_CDN, RES_MENU_LINK } from "../../utils/constants";
 import { addItem } from "../../utils/store/cartSlice";
 import { useDispatch, useDispatch } from "react-redux";
+import { useParams } from "react-router-dom";
 
 const ResItems = ({ items }) => {
    //UPDATING THE STORE USING DISPATCH HOOK FOR ACTIONS
+
    const dispatch = useDispatch();
    const handleAddItem = (item) => {
       dispatch(addItem(item));

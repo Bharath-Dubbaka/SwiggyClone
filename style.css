@@ -260,6 +260,7 @@ a {
    justify-content: flex-end;
 }
 .menuItemsWrap {
+   width: 100%;
    margin: 0.5rem 0 0 0;
 }
 .menuItems {
@@ -343,7 +344,49 @@ a {
    margin-bottom: 1rem;
 }
 
-
 .buttonSizeMid {
    color: darkorange;
+}
+
+.tally {
+   font-weight: 900;
+   font-size: 1.5rem;
+   text-align: left;
+   margin: 1rem 0 1rem 0;
+}
+
+.addBtnInCart {
+   border-radius: 8px;
+   width: 10%;
+   /* left: 48px; */
+   border: 2px var(--app-highlight-color) solid;
+   height: 2rem;
+   font-weight: 900;
+   cursor: pointer;
+}
+
+.subMenuWrapCart {
+   border: 1px lightgray solid;
+   border-radius: 10px;
+   padding: 1rem 1rem 0 1rem;
+   border-radius: 28px;
+   background: #ffffff;
+   box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+   margin: 0.5rem 0;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   margin: 4rem 10rem 4rem 10rem;
+}
+
+
+.menuItemsCart {
+   border-bottom: 1px solid lightgray;
+   display: flex;
+   margin-top: 1.5rem;
+   padding-bottom: 0;
+   width: 100%;
+   justify-content: space-between;
+   overflow: hidden;
 }

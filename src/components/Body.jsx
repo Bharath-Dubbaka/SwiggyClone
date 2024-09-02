@@ -105,6 +105,7 @@ const Body = () => {
                onClick={(e) => {
                   topRatedRes(e);
                }}
+               style={{ marginLeft: "1rem" }}
             >
                4+ stars
             </button>
