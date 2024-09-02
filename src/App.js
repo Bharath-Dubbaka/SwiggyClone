@@ -8,11 +8,12 @@ import AboutClass from "./components/classCompo/AboutClass";
 import Error from "./components/Error";
 import RestaurantMenu from "./components/RestaurantMenu";
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import Shimmer from "./components/shimmerUI/Shimmer";
 import UserContext from "../utils/contextData/UserContext";
 import { Provider } from "react-redux";
 import appStore from "../utils/store/appStore";
 import Cart from "./components/Cart";
+import Shimmer from "./components/shimmerUI/Shimmer";
+
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => {
