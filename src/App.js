@@ -12,8 +12,7 @@ import UserContext from "../utils/contextData/UserContext";
 import { Provider } from "react-redux";
 import appStore from "../utils/store/appStore";
 import Cart from "./components/Cart";
-import Shimmer from "./components/shimmerUI/Shimmer";
-
+import Shimmer from "../src/components/loadingScreen/Shimmer"
 
 const Grocery = lazy(() => import("./components/Grocery"));
 const About = lazy(() => {

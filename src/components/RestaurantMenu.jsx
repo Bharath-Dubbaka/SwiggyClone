@@ -1,4 +1,4 @@
-import Shimmer from "./shimmerUI/Shimmer";
+import Shimmer from "./loadingScreen/Shimmer";
 import { useParams } from "react-router-dom";
 import useResMenu from "../../utils/cusHooks/useResMenu";
 import ResMenuCategories from "./ResMenuCategories";

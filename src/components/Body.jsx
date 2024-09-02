@@ -1,7 +1,7 @@
 import RestaurantCard from "./RestaurantCard";
 import resList from "../../utils/mockData";
 import { useState, useEffect, useContext } from "react";
-import Shimmer from "./shimmerUI/Shimmer";
+import Shimmer from "./loadingScreen/Shimmer";
 import { Link } from "react-router-dom";
 import useStatus from "../../utils/cusHooks/useStatus";
 import { withPromotedLabel } from "./RestaurantCard";
